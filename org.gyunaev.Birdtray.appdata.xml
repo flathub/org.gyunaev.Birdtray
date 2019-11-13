@@ -1,5 +1,5 @@
-<!-- https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html -->
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html -->
 <component type="desktop">
   <id>org.gyunaev.Birdtray</id>
   <metadata_license>CC0-1.0</metadata_license>
@@ -9,15 +9,27 @@
     <p>
       Birdtray is a system tray new mail notification for Thunderbird, which does not require extensions
     </p>
+    <p>Features:</p>
+​    <ul>
+      <li>Shows the unread email counter in the Thunderbird system tray icon.</li>
+​      <li>Optionally can animate the Thunderbird system tray icon if new mail is received.</li>
+      <li>You can snooze new mail notifications for a specific time period.</li>
+      <li>Birdtray checks the unread e-mail status directly by reading the Thunderbird email search database. This means it does not need any extensions, and thus is immune to any future extension API changes in Thunderbird</li>
+      <li>It can hide the Thunderbird window, and restore it. There is also context menu for that.</li>
+      <li>You can configure which accounts you want to check for unread emails on</li>
+      <li>You can choose different font colors for different email accounts. This allows you, for example, to have blue unread count for personal emails, red unread count for work emails, and green unread count if both folders have unread mail.</li>
+      <li>Can launch Thunderbird when Birdtray starts, and terminate it when Birdtray quits (configurable).</li>
+      <li>Can monitor that Thunderbird is running, and indicate it if you accidentally closed it.</li>
+      <li>Has configurable "New Email" functionality, allowing pre-configured email templates.</li>
+    </ul>
     <p>
-      The feature to "Start Thunderbird when Birdtray starts" needs the flathub thunderbird installed by default.
+      The feature to "Start Thunderbird when Birdtray starts" needs the flathub thunderbird installed by default. The default thunderbird directory is "~/.var/app/org.mozilla.Thunderbird/.thunderbird".
     </p>
   </description>
 
   <categories>
     <category>Calendar</category>
     <category>Chat</category>
-    <category>Communication</category>
     <category>ContactManagement</category>
     <category>Email</category>
     <category>Feed</category>
@@ -25,9 +37,9 @@
     <category>IRCClient</category>
     <category>News</category>
     <category>Office</category>
-    <category>Productivity</category>
   </categories>
   <url type="homepage">https://github.com/gyunaev/birdtray/</url>
+  <url type="bugtracker">https://github.com/gyunaev/birdtray/issues/</url>
   <launchable type="desktop-id">org.gyunaev.Birdtray.desktop</launchable>
  
   <releases>
@@ -38,9 +50,10 @@
   <project_license>GPL-3.0+</project_license>
   <developer_name>gyunaev</developer_name>
   <screenshots>
-    <screenshot type="default">https://raw.githubusercontent.com/ThanosApostolou/flathub/org.gyunaev.Birdtray/birdtray-settings.png</screenshot>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/flathub/org.gyunaev.Birdtray/master/birdtray-settings.png</image>
+    </screenshot>
   </screenshots>
-  
  
   <content_rating type="oars-1.1">
   </content_rating>
