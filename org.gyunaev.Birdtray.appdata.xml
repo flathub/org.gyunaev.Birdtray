@@ -41,11 +41,11 @@
   <url type="homepage">https://github.com/gyunaev/birdtray/</url>
   <url type="bugtracker">https://github.com/gyunaev/birdtray/issues/</url>
   <launchable type="desktop-id">org.gyunaev.Birdtray.desktop</launchable>
- 
+
   <releases>
     <release date="2019-05-21" version="1.6" urgency="medium" />
   </releases>
- 
+
   <project_group>gyunaev</project_group>
   <project_license>GPL-3.0+</project_license>
   <developer_name>gyunaev</developer_name>
@@ -54,8 +54,7 @@
       <image>https://raw.githubusercontent.com/flathub/org.gyunaev.Birdtray/master/birdtray-settings.png</image>
     </screenshot>
   </screenshots>
- 
-  <content_rating type="oars-1.1">
-  </content_rating>
- 
+
+  <content_rating type="oars-1.1"></content_rating>
+  <translation type="qt">birdtray</translation>
 </component>

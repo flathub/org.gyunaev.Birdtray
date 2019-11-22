@@ -11,6 +11,7 @@
       "--device=dri",
       "--filesystem=~/.thunderbird",
       "--filesystem=~/.var/app/org.mozilla.Thunderbird/.thunderbird",
+      "--filesystem=/var/lib/flatpak/app/org.mozilla.Thunderbird",
       "--talk-name=org.freedesktop.Flatpak",
       "--talk-name=org.freedesktop.Notifications",
       "--talk-name=org.kde.StatusNotifierWatcher",
@@ -19,30 +20,15 @@
     "modules": [
         {
             "name": "birdtray",
-            "buildsystem": "qmake",
-            "subdir": "src",
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DCMAKE_BUILD_TYPE=Release"
+            ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/gyunaev/birdtray.git",
-                    "commit": "f529663e5488f3f7f05d5d1ddeffec8267c0da87"
-                },
-                {
-                    "type": "patch",
-                    "path": "thunderbird-spawn.patch"
-                }
-            ]
-        },
-        {
-            "name": "thunderbird-spawn",
-            "buildsystem": "simple",
-            "build-commands": [
-                "install -D thunderbird /app/bin/thunderbird"
-            ],
-            "sources": [
-                {
-                    "type": "file",
-                    "path": "thunderbird"
+                    "commit": "fad0b17991630ff8f90e93173182f8028d7db1a4"
                 }
             ]
         },
