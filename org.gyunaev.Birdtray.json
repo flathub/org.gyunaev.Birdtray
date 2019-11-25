@@ -22,26 +22,18 @@
             "name": "birdtray",
             "buildsystem": "cmake-ninja",
             "config-opts": [
-                "-DCMAKE_BUILD_TYPE=Release"
+                "-DCMAKE_BUILD_TYPE=Release",
+                "-DOPT_THUNDERBIRD_CMDLINE=/usr/bin/flatpak-spawn --host org.mozilla.Thunderbird"
             ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/gyunaev/birdtray.git",
-                    "commit": "fad0b17991630ff8f90e93173182f8028d7db1a4"
-                }
-            ]
-        },
-        {
-            "name": "appdata",
-            "buildsystem": "simple",
-            "build-commands": [
-                "install -D org.gyunaev.Birdtray.appdata.xml /app/share/metainfo/org.gyunaev.Birdtray.appdata.xml"
-            ],
-            "sources": [
+                    "commit": "ffb9d17866651509e9fca68bcb38ec1c191319e6"
+                },
                 {
-                    "type": "file",
-                    "path": "org.gyunaev.Birdtray.appdata.xml"
+                    "type": "patch",
+                    "path": "appdata.patch"
                 }
             ]
         }
